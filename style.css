@@ -4,10 +4,61 @@
     border: 0;
 }
 
-body {
+body#pagelanding {
     background-color: black;
     /* background-color: blanchedalmond; */
 }
+
+
+#imagebanner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+img#pagelanding {
+    display: block;
+    filter: sepia(40%);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+#banner {
+    width: 100%;
+    height: 25%;
+    margin-top: 13rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    /* display: inline-flex;
+    flex-direction: column;
+    align-content: start;
+    object-position: ;
+    width: 50vw;
+    height: 50%;
+    background: yellow; */
+    /* position: absolute; */
+    background: -webkit-linear-gradient(#af0a0a, #d7ae08);
+    -webkit-background-clip:content-box;
+    -webkit-text-fill-color: transparent;
+    font-size: 5pt;
+    text-align: center;
+}
+
+
+body#page1 {
+    background-image: url('//images.unsplash.com/photo-1501103777042-0aeb4df8ff8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2xkJTIwaG9sbHl3b29kfGVufDB8fDB8fHww" alt="Image of old Hollywood');
+    position: absolute;
+    
+}
+
 
 h1 {
     color: blanchedalmond;
@@ -19,30 +70,17 @@ h1 {
     text-underline-offset: 0.25rem;
 }
 
+
 h2 {
     color: blanchedalmond;
     font-size: 23pt;
     text-align: center;
 }
 
-h3 {
-    color: blanchedalmond;
-    font-size: 23pt;
-    text-align: center;
-    padding-top: 3rem;
-    letter-spacing: 1rem;
-}
 
 
-h4 {
-    color: whitesmoke;
-    font-size: 20pt;
-    text-align: center;
-    padding-bottom: 3rem;
-}
 
-
-#landimage {
+/* .landimage {
     filter: sepia(40%);
     display: flex;
     width: 100%;
@@ -51,10 +89,22 @@ h4 {
     justify-content: center;
     padding-top: 2rem;
     padding-bottom: 3rem;
-}
+} */
 
-#playerturn {
-    padding-top: 2rem;
+
+
+/* .banner {
+    background: -webkit-linear-gradient(#af0a0a, #d7ae08);
+    -webkit-background-clip:content-box;
+    -webkit-text-fill-color: transparent;
+    font-size: 45pt;
+    text-align: center;
+
+} */
+
+
+.butt {
+    text-align: center;
 }
 
 
@@ -65,33 +115,30 @@ button {
     letter-spacing: 3rem;
 }
 
-#input {
+
+h3 {
+    color: blanchedalmond;
+    font-size: 23pt;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 3rem;
+    letter-spacing: 1rem;
 }
 
-#butt {
+
+
+.playerturn {
+    padding-top: 2rem;
+}
+
+
+h4 {
+    color: whitesmoke;
+    font-size: 20pt;
     text-align: center;
+    padding-bottom: 3rem;
 }
 
-
-.butt1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 1rem;
-}
-
-
-
-.butt2 {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 1rem;
-    margin-right: 2rem;
-}
-
-
+/*    
 .cate1 {
     display: grid;
     width: 85%;
@@ -120,7 +167,48 @@ button {
 
 .grid > span {
     padding: 8px 4px;
+} */
+
+
+
+.input {
+    text-align: center;
+    padding-top: 1rem;
 }
+
+
+.butt1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.butt2 {
+    text-align: end;
+    margin-right: 1.9rem;
+    /* padding-top: 3rem; */
+    
+}
+
+
+.butt3 {
+
+}
+
+
+
+
+/* .butt2 {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    margin-right: 2rem;
+} */
+
+
 
 footer {
     color: blanchedalmond;
@@ -138,8 +226,13 @@ footer {
     } 
 
     img {
-        width: 90vw;
-        height: 40vh;
+        
+        width: 70vw;
+    }
+
+    #banner {
+        margin-top: 5rem;
+
     }
 
 
@@ -167,7 +260,7 @@ footer {
 
     footer {
         padding-top: 8rem;
-        text-align: left;
+        /* text-align: left; */
         margin-left: 1rem;
         font-size: 10pt;
     }
