@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
 }
 
 
@@ -14,11 +13,23 @@
     position: absolute;
     background-image: url('//images.unsplash.com/photo-1501103777042-0aeb4df8ff8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2xkJTIwaG9sbHl3b29kfGVufDB8fDB8fHww" alt="Image of old Hollywood');
     background-size: cover;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.7;
+}
+
+
+.round1table { 
+    text-align: center;
+}
+
+
+.category {
+    border-color: black;
+    word-spacing: 20pt;
 
 }
+
 
 .background-inside {
     position: relative;
@@ -38,7 +49,6 @@ body#pagelanding {
 }
 
 
-
 img#pagelanding {
     display: block;
     filter: sepia(40%);
@@ -49,6 +59,15 @@ img#pagelanding {
     text-align: center;
 
 }
+
+table {
+    margin: auto;
+    border: 12px solid;
+    border-image: linear-gradient(45deg, #FFFFFF, rgb(255, 122, 89)) 10;
+    font-size: 30pt;
+    /* border-width: 5pt; */
+}
+
 
 #banner {
     width: 100%;
@@ -66,7 +85,8 @@ img#pagelanding {
     height: 50%;
     background: yellow; */
     /* position: absolute; */
-    background: -webkit-linear-gradient(#af0a0a, #d7ae08);
+    /* background: -webkit-linear-gradient(#af0a0a, #d7ae08); */
+    background-color: antiquewhite;
     -webkit-background-clip:content-box;
     -webkit-text-fill-color: transparent;
     font-size: 5pt;
@@ -131,6 +151,15 @@ h2 {
 
 
 button {
+    /* background: none;
+    color: #af0a0a;
+    /* color: blanchedalmond;
+    font-size: 15pt;
+    letter-spacing: 3rem; */
+}
+
+
+.button0 {
     background: none;
     color: #af0a0a;
     /* color: blanchedalmond; */
@@ -138,6 +167,20 @@ button {
     letter-spacing: 3rem;
 }
 
+.button1 {
+    background: #e2a3939b;
+    color: black;
+    /* color: blanchedalmond; */
+    font-size: 20pt;
+}
+
+.button2 {
+    background: #e2a3939b;
+    color: black;
+    /* color: blanchedalmond; */
+    font-size: 20pt;
+    margin-right: 18rem;
+}
 
 h3 {
     /* color: blanchedalmond; */
@@ -208,7 +251,7 @@ h4 {
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    /* color: #af0a0a; */
+    color: #af0a0a;
 }
 
 
@@ -306,3 +349,7 @@ footer {
     }
 }
 
+/* 
+background: -webkit-linear-gradient(#af0a0a, #d7ae08);
+-webkit-background-clip:content-box;
+-webkit-text-fill-color: transparent; */
