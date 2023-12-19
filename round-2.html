@@ -6,90 +6,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeopardy</title>
-    <script src="./scripts/index.js" type="module"></script>
+
   </head>
-  <body>
-    <h3>ROUND TWO</h3>
+    <div class="background">
+      <div class="background-inside">
+        <body id="page2">
+          <h3>ROUND TWO</h3>
+    <!-- Do not change the script source. Allows import/export to work. -->
+    <script src="./scripts/index.js" type="module"></script>
+  
     <div class="playerturn">
       <h4>Moose's Turn</h4>
     </div> 
-    <!-- Do not change the script source. Allows import/export to work. -->
-    <script src="./scripts/index.js" type="module"></script>
-  </body>
 
-  <table class="category">
- 
+    <table class="round1table" border>
+      <col width="100"><col width="100"><col width="100"><col width="100">
+      <col width="100"><col width="100"><col width="100"><col width="100">
+      <col width="100"><col width="100"><col width="100"><col width="100">
+      <tbody>
+        <tr> 
+          <th colspan="2">Category</th>
+          <th colspan="2">Category</th>
+          <th colspan="2">Category</th>
+          <th colspan="2">Category</th>
+          <th colspan="2">Category</th>
+          <th colspan="2">Category</th>
+        </tr>
+        <tr> 
+          <td colspan="2">200</td>
+          <td colspan="2">200</td>
+          <td colspan="2">200</td>
+          <td colspan="2">200</td>
+          <td colspan="2">200</td>
+          <td colspan="2">200</td>
+      </tr>
 
-
-    <table border> 
       <tr>
-        <th colspan="9">Category</th>
-        <th colspan="2">Category</th>
-        <th colspan="2">Category</th>
-        <th colspan="2">Category</th>
-        <th colspan="2">Category</th>
-        <th colspan="2">Category</th>
-    </tr>
-  </table>
-
-    <tr>
-      <td scope="row">200</td>
-      <td scope="row">200</td>
-      <td scope="row">200</td>
-      <td scope="row">200</td>
-      <td scope="row">200</td>
-      <td scope="row">200</td>
-    </tr>
-    <tr>
-      <td scope="row">300</td>
-      <td scope="row">300</td>
-      <td scope="row">300</td>
-      <td scope="row">300</td>
-      <td scope="row">300</td>
-      <td scope="row">300</td>
-    </tr>
-    <tr>
-      <td scope="row">400</td>
-      <td scope="row">400</td>
-      <td scope="row">400</td>
-      <td scope="row">400</td>
-      <td scope="row">400</td>
-      <td scope="row">400</td>
-    </tr> <tr>
-      <td scope="row">500</td>
-      <td scope="row">500</td>
-      <td scope="row">500</td>
-      <td scope="row">500</td>
-      <td scope="row">500</td>
-      <td scope="row">500</td>
-    </tr> <tr>
-      <td scope="row">600</td>
-      <td scope="row">600</td>
-      <td scope="row">600</td>
-      <td scope="row">600</td>
-      <td scope="row">600</td>
-      <td scope="row">600</td>
-    </tr>
-  </table>
+        <td colspan="2">300</td>
+        <td colspan="2">300</td>
+        <td colspan="2">300</td>
+        <td colspan="2">300</td>
+        <td colspan="2">300</td>
+        <td colspan="2">300</td>
+      </tr>
+      <tr>
+        <td colspan="2">400</td>
+        <td colspan="2">400</td>
+        <td colspan="2">400</td>
+        <td colspan="2">400</td>
+        <td colspan="2">400</td>
+        <td colspan="2">400</td>
+      </tr>      
+      <tr>
+        <td colspan="2">500</td>
+        <td colspan="2">500</td>
+        <td colspan="2">500</td>
+        <td colspan="2">500</td>
+        <td colspan="2">500</td>
+        <td colspan="2">500</td>
+      </tr>      
+      <tr>
+        <td colspan="2">600</td>
+        <td colspan="2">600</td>
+        <td colspan="2">600</td>
+        <td colspan="2">600</td>
+        <td colspan="2">600</td>
+        <td colspan="2">600</td>
+      </tr>     
+    </tbody>
+    </table>
   
-  <div class="input">
-    <input title="User Input">
-  </div>
 
-  <div class="butt1">
-    <a href="">
-      <button>GUESS</button>
-    </a>
+    <div class="input">
+      <input title="User Input">
+    </div>
+
+    <div class="butt1">
       <a href="">
-      <button>PASS</button>
-    </a>
+        <button class="button1">&nbspGUESS&nbsp</button>
+      </a>
+        <a href="">
+        <button class="button1">&nbspPASS&nbsp</button>
+      </a>
+    </div>
+<div class="playerscore">
+  <div class="player1">
+    <h5>Player 1 Score: 0</h5>
   </div>
-
-  <div class="butt2">  
-    <a href="round-2.html">
-      <button>Next</button>
-    </a>
-  </div>
-</body>
-<footer>@MarthaMeansLady</footer>
+  <div class="player2">
+  <h5>Player 2 Score: 1</h5>
+</div>
+</div>
+    <div class="butt2">  
+      <a href="final-jeopardy.html">
+        <button class="button2">&nbspNext&nbsp</button>
+      </a>
+    </div>
+  </body>
+<footer class="foot1">
+@MarthaMeansLady
+</footer>
+</div>
+</div> 
 </html>
+
+<!-- credits:
+  1. https://css-tricks.com/apply-a-filter-to-a-background-image/
+
+  2. https://dev.to/khush2706/changing-background-image-opacity-using-before-and-after-pseudo-elements-32i7
+
+  3. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr
+
+  4. https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,Otherwise%2C%20it%20will%20not%20render.
+
+  5. -->
+
+
