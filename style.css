@@ -4,6 +4,27 @@
     border: 0;
 }
 
+
+.background::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('//images.unsplash.com/photo-1501103777042-0aeb4df8ff8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2xkJTIwaG9sbHl3b29kfGVufDB8fDB8fHww" alt="Image of old Hollywood');
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+    opacity: 0.5;
+
+}
+
+.background-inside {
+    position: relative;
+}
+
+
 body#pagelanding {
     background-color: black;
     /* background-color: blanchedalmond; */
@@ -53,15 +74,16 @@ img#pagelanding {
 }
 
 
-body#page1 {
+/* body#page1 {
     background-image: url('//images.unsplash.com/photo-1501103777042-0aeb4df8ff8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2xkJTIwaG9sbHl3b29kfGVufDB8fDB8fHww" alt="Image of old Hollywood');
     position: absolute;
-    
-}
+    background-filter: opacity(0.3);
+}  */
 
 
 h1 {
-    color: blanchedalmond;
+    /* color: blanchedalmond; */
+    color: #af0a0a;
     font-size: 45pt;
     text-align: center;
     padding-top: 3rem;
@@ -110,14 +132,16 @@ h2 {
 
 button {
     background: none;
-    color: blanchedalmond;
+    color: #af0a0a;
+    /* color: blanchedalmond; */
     font-size: 15pt;
     letter-spacing: 3rem;
 }
 
 
 h3 {
-    color: blanchedalmond;
+    /* color: blanchedalmond; */
+    color: #af0a0a;
     font-size: 23pt;
     text-align: center;
     padding-top: 3rem;
@@ -132,7 +156,8 @@ h3 {
 
 
 h4 {
-    color: whitesmoke;
+    /* color: whitesmoke; */
+    color: #af0a0a;
     font-size: 20pt;
     text-align: center;
     padding-bottom: 3rem;
@@ -183,6 +208,7 @@ h4 {
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    /* color: #af0a0a; */
 }
 
 
@@ -212,6 +238,14 @@ h4 {
 
 footer {
     color: blanchedalmond;
+    text-align: right;
+    padding-top: 3rem;
+    padding-right: 8rem;
+}
+
+.foot1 {
+    /* color: blanchedalmond; */
+    color: #af0a0a;
     text-align: right;
     padding-top: 3rem;
     padding-right: 8rem;
