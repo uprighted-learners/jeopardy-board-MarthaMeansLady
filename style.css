@@ -4,19 +4,19 @@
     padding: 0;
 }
 
-table {
+/* table {
     background-color: #faecd1;
     margin: auto;
     border: 12px solid;
     border-image: linear-gradient(45deg, #FFFFFF, rgb(255, 122, 89)) 10;
     font-size: 28pt;
     /* border-width: 5pt; */
-}
+} */
 
 footer {
     color: blanchedalmond;
     text-align: right;
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-right: 8rem;
 }
 /*---END ALL--------------------------------------------------------------*/
@@ -40,7 +40,8 @@ footer {
     background: yellow; */
     /* position: absolute; */
     /* background: -webkit-linear-gradient(#af0a0a, #d7ae08); */
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-color: peachpuff;
     -webkit-background-clip:content-box;
     -webkit-text-fill-color: transparent;
     font-size: 5pt;
@@ -68,11 +69,12 @@ body#pagelanding {
 
 
 h1 {
-    color: blanchedalmond;
+    /* color: blanchedalmond; */
     /* color: #af0a0a; */
+    color: peachpuff;
     font-size: 45pt;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
     text-decoration: underline;
     text-underline-offset: 0.25rem;
@@ -130,6 +132,7 @@ img#pagelanding {
     position: relative;
 }
 
+
 .butt1 {
     display: flex;
     justify-content: space-around;
@@ -162,6 +165,19 @@ img#pagelanding {
     margin-right: 18rem;
 }
 
+
+#cgory { 
+    padding: 0;
+}
+
+.cgory {
+    font-size: 15pt;
+    text-align: center;
+    text-emphasis-style: bold;
+    padding: 1rem;
+}
+
+
 .category {
     border-color: black;
     word-spacing: 20pt;
@@ -191,9 +207,6 @@ h4 {
     font-size: 25pt;
     text-align: center;
     padding-bottom: 3rem;
-}
-
-h5 { 
 }
 
 
@@ -227,9 +240,44 @@ h5 {
     padding-top: 2rem;
 }
 
-.round1table { 
-    text-align: center;
+
+#q {
+    border: 0.1rem solid black;
+    font-size: 15pt;
+    border: 0.4rem solid white;
+    
+    -webkit-transition : border 500ms ease-out;
+    -moz-transition : 500ms ease-out;
+    -o-transition : border 500ms ease-out;
+    transition : border 500ms ease-out;
 }
+
+
+#q:hover {
+    border: 0.3rem solid black;
+}
+
+
+.wrappert {
+    display: grid;
+    margin: auto;
+    grid-template-rows:repeat(6, 1fr);
+    grid-template-columns:repeat(6, 1fr);
+    grid-gap: 1rem;
+    background-color: peachpuff;
+    max-width: 90%;
+    text-align: center;
+    padding: .5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+
+
+/* .round1table { 
+    text-align: center;
+} */
 /*---END PAGE ONE--------------------------------------------------------*/
 
 
@@ -321,10 +369,6 @@ h4 {
     padding-bottom: 3rem;
 }
 
-h5 { 
-}
-
-
 .input {
     text-align: center;
     padding-top: 1rem;
@@ -365,25 +409,26 @@ h5 {
 /*---FINAL PAGE--------------------------------------------------------
 delete selectors from copying over from page two
 style final page after the index page*/
-/* .background3::before {
+ .background3::before {
     content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* filter: saturate(5); */
-    /* filter: grayscale(100%); 
+    filter: saturate(5);
+    filter: grayscale(100%); 
     position: absolute;
     background-image: url('//images.unsplash.com/photo-1501103777042-0aeb4df8ff8f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2xkJTIwaG9sbHl3b29kfGVufDB8fDB8fHww" alt="Image of old Hollywood');
     background-size: cover;
-    /* filter: grayscale(100%); 
+    filter: grayscale(100%); 
     z-index: -1;
     opacity: 0.9;
-} */
+} 
 
 body {
-    background-color: black;
+    /* background-color: aquamarine; */
 }
+
 .background3-inside {
     position: relative;
 }
@@ -409,7 +454,7 @@ body {
     background: #e2a3939b;
     /* color: black; */
     color: blanchedalmond;
-    font-size: 20pt;
+    font-size: 9pt;
 }
 
 .button2 {
@@ -419,6 +464,13 @@ body {
     font-size: 20pt;
     margin-right: 18rem;
 }
+
+
+.cgory1 {
+    font-size: 15pt;
+    font-style: bolder;
+}
+
 
 .category {
     border-color: black;
@@ -437,21 +489,27 @@ body {
 h3 {
     /* color: blanchedalmond; */
     color: #af0a0a;
-    font-size: 43pt;
+    font-size: 33pt;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 1rem;
     /* letter-spacing: 1rem; */
 }
 
 h4 {
     /* color: whitesmoke; */
     color: #af0a0a;
-    font-size: 25pt;
+    font-size: 20pt;
     text-align: center;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
-h5 { 
+h5 {
+    /* color: blanchedalmond; */
+    color: #af0a0a;
+    font-size: 16pt;
+    text-align: center;
+    padding-top: 0.5rem;
+    /* letter-spacing: 1rem; */
 }
 
 
@@ -460,6 +518,11 @@ h5 {
     padding-top: 1rem;
 }
 
+#marilyn {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .player1 {
     display: inline-flex;
@@ -485,8 +548,44 @@ h5 {
     padding-top: 2rem;
 }
 
+.playerturn1 {
+    padding-top: 1rem;
+}
+
+
 .round1table { 
     text-align: center;
+}
+
+#q1 {
+    text-indent: 15px;
+    font-size: 13pt;
+}
+
+
+.wrappert1 {
+    /* background-image: url('') */
+    display: grid;
+    margin: auto;
+    grid-template-rows:repeat(1, 1fr);
+    grid-template-columns:repeat(1, 1fr);
+    grid-gap: 1rem;
+    background-color: peachpuff;
+    max-width: 30rem;
+    max-height: 40rem;
+    padding: 0.5rem;
+    text-align: center;
+    /* padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem; */
+    -webkit-transition : border 500ms ease-out;
+    -moz-transition : 500ms ease-out;
+    -o-transition : border 500ms ease-out;
+    transition : border 500ms ease-out;
+}
+
+.wrappert1:hover {
+    border: 0.3rem solid black;
 }
 /*---END FINAL PAGE--------------------------------------------------------*/
 
@@ -549,7 +648,4 @@ h5 {
     }
 }
 
-/* 
-background: -webkit-linear-gradient(#af0a0a, #d7ae08);
--webkit-background-clip:content-box;
--webkit-text-fill-color: transparent; */
+

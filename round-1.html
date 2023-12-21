@@ -6,20 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeopardy</title>
-
   </head>
+  <body>
     <div class="background">
       <div class="background-inside">
         <body id="page1">
           <h3>ROUND ONE</h3>
           <!-- Do not change the script source. Allows import/export to work. -->
-          <script src="./scripts/index.js" type="module"></script>
-      
           <div class="playerturn">
             <h4>Moose's Turn</h4>
           </div> 
-      
-          <table class="round1table" border>
+          <div class="wrappert">
+            <div class="cgory">Category</div>          
+            <div class="cgory">Category</div>          
+            <div class="cgory">Category</div>          
+            <div class="cgory">Category</div>          
+            <div class="cgory">Category</div>          
+            <div class="cgory">Category</div>          
+            <div id="q">100</div>  
+            <div id="q">100</div>  
+            <div id="q">100</div>  
+            <div id="q">100</div>  
+            <div id="q">100</div>  
+            <div id="q">100</div>   
+            <div id="q">200</div>    
+            <div id="q">200</div>   
+            <div id="q">200</div>   
+            <div id="q">200</div>  
+            <div id="q">200</div>  
+            <div id="q">200</div>  
+            <div id="q">300</div>  
+            <div id="q">300</div>  
+            <div id="q">300</div>  
+            <div id="q">300</div>  
+            <div id="q">300</div>  
+            <div id="q">300</div>  
+            <div id="q">400</div>  
+            <div id="q">400</div>  
+            <div id="q">400</div>  
+            <div id="q">400</div>  
+            <div id="q">400</div>  
+            <div id="q">400</div>  
+            <div id="q">500</div>  
+            <div id="q">500</div>  
+            <div id="q">500</div>  
+            <div id="q">500</div>  
+            <div id="q">500</div>  
+            <div id="q">500</div>  
+            </div>
+        
+          <!-- <table class="round1table" border>
             <col width="100"><col width="100"><col width="100"><col width="100">
             <col width="100"><col width="100"><col width="100"><col width="100">
             <col width="100"><col width="100"><col width="100"><col width="100">
@@ -33,7 +69,7 @@
                 <th colspan="2">Category</th>
               </tr>
               <tr> 
-                <td colspan="2">100</td>
+                <td colspan="2">100</td> 
                 <td colspan="2">100</td>
                 <td colspan="2">100</td>
                 <td colspan="2">100</td>
@@ -42,41 +78,41 @@
             </tr>
 
             <tr>
-              <td colspan="2">200</td>
-              <td colspan="2">200</td>
-              <td colspan="2">200</td>
-              <td colspan="2">200</td>
-              <td colspan="2">200</td>
-              <td colspan="2">200</td>
+                <td colspan="2">200</td>
+                <td colspan="2">200</td>
+                <td colspan="2">200</td>
+                <td colspan="2">200</td>
+                <td colspan="2">200</td>
+                <td colspan="2">200</td>
             </tr>
             <tr>
-              <td colspan="2">300</td>
-              <td colspan="2">300</td>
-              <td colspan="2">300</td>
-              <td colspan="2">300</td>
-              <td colspan="2">300</td>
-              <td colspan="2">300</td>
+                <td colspan="2">300</td>
+                <td colspan="2">300</td>
+                <td colspan="2">300</td>
+                <td colspan="2">300</td>
+                <td colspan="2">300</td>
+                <td colspan="2">300</td>
             </tr>      
             <tr>
-              <td colspan="2">400</td>
-              <td colspan="2">400</td>
-              <td colspan="2">400</td>
-              <td colspan="2">400</td>
-              <td colspan="2">400</td>
-              <td colspan="2">400</td>
+                <td colspan="2">400</td>
+                <td colspan="2">400</td>
+                <td colspan="2">400</td>
+                <td colspan="2">400</td>
+                <td colspan="2">400</td>
+                <td colspan="2">400</td>
             </tr>      
             <tr>
-              <td colspan="2">500</td>
-              <td colspan="2">500</td>
-              <td colspan="2">500</td>
-              <td colspan="2">500</td>
-              <td colspan="2">500</td>
-              <td colspan="2">500</td>
+                <td colspan="2">500</td>
+                <td colspan="2">500</td>
+                <td colspan="2">500</td>
+                <td colspan="2">500</td>
+                <td colspan="2">500</td>
+                <td colspan="2">500</td>
             </tr>     
           </tbody>
           </table>
         
-    
+     -->
           <div class="input">
             <input title="User Input">
           </div>
@@ -89,12 +125,17 @@
               <button class="button1">&nbspPASS&nbsp</button>
             </a>
           </div>
+          
       <div class="playerscore">
         <div class="player1">
-          <h5>Player 1 Score: 0</h5>
+          <h5>Player 1 Score:<div class="input">
+            <input title="User Input">
+          </div></h5>
         </div>
         <div class="player2">
-        <h5>Player 2 Score: 1</h5>
+        <h5>Player 2 Score:<div class="input">
+          <input title="User Input">
+        </div></h5>
       </div>
       </div>
           <div class="butt2">  
@@ -110,6 +151,8 @@
 </div> 
 </html>
 
+
+<script src="./scripts/index.js" type="module"></script>
 <!-- credits:
         1. https://css-tricks.com/apply-a-filter-to-a-background-image/
       
