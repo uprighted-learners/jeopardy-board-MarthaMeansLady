@@ -105,7 +105,7 @@ body#pagelanding {
 }
 
 .button0 {
-    background: rgba(0, 0, 0, 0.664);
+    background: rgba(0, 0, 0, 0.69);
     padding: .7rem;
     color: #af0a0a;
     /* color: blanchedalmond; */
@@ -194,7 +194,7 @@ h4 {
     color: #af0a0a;
     font-size: 17pt;
     text-align: center;
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
 }
 
 h5 {
@@ -328,32 +328,35 @@ img#pagelanding {
     border: 1.5rem solid black;
 }
 
-/* .round1table { 
-    text-align: center;
-} */
-
 @media screen and (max-width: 500px) {
-    #landimage {
-        width: 10%;
-        height: 10%;
-        padding: 0;
-        margin: auto;
-    } 
-
     img {
-        
         width: 70vw;
     }
 
     #banner {
         margin-top: 5rem;
-
     }
-
-
+    
     body {
         padding: 0;
-        font-size: 15pt;
+        margin: 0;
+        border: 0;
+        background-color: black
+        /* font-size: 15pt; */
+    }
+
+    .butt1 {
+        display: block;
+        text-align: center;
+        font-size: 13pt;
+    }
+
+    .button0 {
+        padding: 0;
+    }
+
+    .cgory {
+        padding: 0;
     }
 
     h1 {
@@ -368,21 +371,71 @@ img#pagelanding {
         padding-top: 0rem;
     }
 
-    #playerturn {
-        font-size: 20rem;
+    h3 {
+        font-size: 15pt;
+        padding-bottom: 0rem;
+        padding-top: 1rem;
     }
 
+    h4 {
+        font-size: 12pt;
+    }
+
+    h5 { 
+        font-size: 13pt;
+        padding: 0;
+    }
+
+    .input {
+        padding: 0.5;
+    }
 
     footer {
         padding-top: 8rem;
-        /* text-align: left; */
+        /text-align: left; 
         margin-left: 1rem;
         font-size: 10pt;
     }
 
+    .foot1 {
+        text-align: right;
+        padding-top: 0rem;
+        /* padding-left: 1rem; */
+        padding-right: 1rem;
+    }
 
-    button {
+ 
+    .playerscore {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    .wrappert {
+        /* display: block; */
+        display: grid;
+        margin: auto;
+        grid-template-rows:repeat(1, .5fr .5fr);
+        grid-template-columns:repeat(1, .5fr .5fr);
+        grid-gap: 1rem;
+        background-color: peachpuff;
+        max-width: 90%;
+        text-align: center;
+        padding: .5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    }
+
+    /* html#page1 {
+        width: 95vw;
+    } */
+    /* #playerturn {
+        font-size: 20rem;
+    } */
+
+    /* button {
         padding-top: 1rem;
         letter-spacing: 1rem;
-    }
-}
+    } */
