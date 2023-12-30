@@ -231,6 +231,18 @@ img#pagelanding {
     padding-bottom: .5rem;
 }
 
+/* .score-display {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.score-display2 {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+} */
+
 #marilyn {
     display: inline-flex;
     flex-direction: row;
