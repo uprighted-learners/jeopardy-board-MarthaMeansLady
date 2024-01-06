@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-/* table {
-    background-color: #faecd1;
-    margin: auto;
-    border: 12px solid;
-    border-image: linear-gradient(45deg, #FFFFFF, rgb(255, 122, 89)) 10;
-    font-size: 28pt;
-    /* border-width: 5pt; */
-
 .background::before {
     content: "";
     top: 0;
@@ -58,16 +50,6 @@
     top: 0;
     left: 0;
     z-index: -10;
-    /* display: inline-flex;
-    flex-direction: column;
-    align-content: start;
-    object-position: ;
-    width: 50vw;
-    height: 50%;
-    background: yellow; */
-    /* position: absolute; */
-    /* background: -webkit-linear-gradient(#af0a0a, #d7ae08); */
-    /* background-color: antiquewhite; */
     background-color: peachpuff;
     -webkit-background-clip:content-box;
     -webkit-text-fill-color: transparent;
@@ -75,13 +57,9 @@
     text-align: center;
 }
 
-body {
-    /* background-color: aquamarine; */
-}
 
 body#pagelanding {
     background-color: black;
-    /* background-color: blanchedalmond; */
 }
 
 .butt {
@@ -91,7 +69,6 @@ body#pagelanding {
 .butt1 {
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
     padding-top: 1rem;
     padding-bottom: 1rem;
     color: #af0a0a;
@@ -115,16 +92,12 @@ body#pagelanding {
 
 .button2 {
     background: #e2a3939b;
-    /* color: black; */
     color: blanchedalmond;
     text-align: center;
-    /* font-size: 40pt; */
-    /* margin-right: 18rem; */
 }
 
 .button2 {
     background: #e2a3939b;
-    /* color: black; */
     color: blanchedalmond;
     font-size: 20pt;
     margin-right: 18rem;
@@ -147,7 +120,6 @@ body#pagelanding {
 }
 
 .foot1 {
-    /* color: blanchedalmond; */
     color: #af0a0a;
     text-align: right;
     padding-top: 1rem;
@@ -157,13 +129,10 @@ body#pagelanding {
 footer {
     color: blanchedalmond;
     text-align: right;
-    /* padding-top: 1rem; */
     padding-right: 8rem;
 }
 
 h1 {
-    /* color: blanchedalmond; */
-    /* color: #af0a0a; */
     color: peachpuff;
     font-size: 45pt;
     text-align: center;
@@ -174,23 +143,19 @@ h1 {
 }
 
 h2 {
-    /* color: blanchedalmond; */
     font-size: 23pt;
     color: #af0a0a;
     text-align: center;
 }
 
 h3 {
-    /* color: blanchedalmond; */
     color: #af0a0a;
     font-size: 23pt;
     text-align: center;
     padding-top: 1rem;
-    /* letter-spacing: 1rem; */
 }
 
 h4 {
-    /* color: whitesmoke; */
     color: #af0a0a;
     font-size: 17pt;
     text-align: center;
@@ -198,15 +163,12 @@ h4 {
 }
 
 h5 {
-    /* color: blanchedalmond; */
     color: #af0a0a;
     font-size: 18pt;
     text-align: center;
     padding-top: 1rem;
-    /* letter-spacing: 1rem; */
     padding-inline-end: 4rem;
     padding-inline-start: 4rem;
-
 }
 
 #imagebanner {
@@ -230,18 +192,6 @@ img#pagelanding {
     padding-top: 1rem;
     padding-bottom: .5rem;
 }
-
-/* .score-display {
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: .5rem;
-}
-
-.score-display2 {
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: .5rem;
-} */
 
 #marilyn {
     display: inline-flex;
@@ -316,7 +266,6 @@ img#pagelanding {
 }
 
 .wrappert1 {
-    /* background-image: url('') */
     display: grid;
     margin: auto;
     grid-template-rows:repeat(1, 1fr);
@@ -327,9 +276,6 @@ img#pagelanding {
     max-height: 40rem;
     padding: 0.5rem;
     text-align: center;
-    /* padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem; */
     -webkit-transition : border 800ms ease-out;
     -moz-transition : 800ms ease-out;
     -o-transition : border 800ms ease-out;
@@ -354,7 +300,6 @@ img#pagelanding {
         margin: 0;
         border: 0;
         background-color: black
-        /* font-size: 15pt; */
     }
 
     .butt1 {
@@ -412,7 +357,6 @@ img#pagelanding {
     .foot1 {
         text-align: right;
         padding-top: 0rem;
-        /* padding-left: 1rem; */
         padding-right: 1rem;
     }
 
@@ -424,7 +368,6 @@ img#pagelanding {
     }
 
     .wrappert {
-        /* display: block; */
         display: grid;
         margin: auto;
         grid-template-rows:repeat(1, .5fr .5fr);
@@ -440,14 +383,3 @@ img#pagelanding {
     }
     }
 
-    /* html#page1 {
-        width: 95vw;
-    } */
-    /* #playerturn {
-        font-size: 20rem;
-    } */
-
-    /* button {
-        padding-top: 1rem;
-        letter-spacing: 1rem;
-    } */
