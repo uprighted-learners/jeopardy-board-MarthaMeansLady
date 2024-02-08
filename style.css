@@ -103,6 +103,11 @@ body#pagelanding {
     margin-right: 18rem;
 }
 
+.category {
+    border-color: black;
+    word-spacing: 20pt;
+}
+
 #cgory { 
     padding: 0;
 }
@@ -114,9 +119,10 @@ body#pagelanding {
     padding: 1rem;
 }
 
-.category {
-    border-color: black;
-    word-spacing: 20pt;
+.closeButton {
+    float: left;
+    font-size: 35px;
+    cursor: pointer;
 }
 
 .foot1 {
@@ -308,6 +314,31 @@ img#pagelanding {
 
 .playerturn {
     padding-top: 1rem;
+}
+
+.popupBox {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); 
+    justify-content: center;
+    align-items: center;
+}
+
+.popupContent {
+    position: fixed;
+    margin: auto; 
+    top: 30%;
+    left: 36.5%;
+    background-color: rgb(16, 13, 9);
+    padding: 20px;
+    color: aliceblue;
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+    box-shadow: 8px 8px 8px rgba(171, 11, 11, 0.607);
+    text-align: center; 
 }
 
 #q1 {
