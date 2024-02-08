@@ -346,7 +346,7 @@ img#pagelanding {
     font-size: 13pt;
 }
 
-#q {
+.q {
     border: 0.1rem solid black;
     font-size: 15pt;
     border: 0.4rem solid white;

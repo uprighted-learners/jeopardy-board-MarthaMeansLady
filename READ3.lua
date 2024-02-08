@@ -1,27 +1,3 @@
-# Jeopardy Game
-In this project, we will be completing the functionality for our Jeopardy / quiz game utilizing what we learned this week!
-
-The game of Jeopardy consists of several players that compete to earn points by selecting questions of varying points values from a board. The board is a 6 X 6 square with each column representing a category, and the first row containing the titles of each category, and every row after being increasingly difficult questions (with correspondingly higher point values) for their categories
-
-You will be given placeholder data for this project in the form of an array of objects.
-
-Stories
-Ready, Set, Go!
-Given the players are on the landing page
-
-When one player clicks the 'Start Game' button
-
-Then the players redirected to the Round 1 page
-
-Start the Game
-Given the players have been redirected to the Round 1 page
-
-When the page loads
-
-Then there is a notification that it is player 1's turn to choose
-
-And the "Guess", "Pass", and "Round 2" buttons are disabled
-
 Select a Question
 Given an empty board, and player 1 is currently up
 
@@ -172,5 +148,3 @@ Given a game is started
 When the board is generated
 
 Then the board has questions fetched from an external API
-
-Upright Learning Platform
