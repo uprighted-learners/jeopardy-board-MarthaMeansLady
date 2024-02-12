@@ -1,6 +1,3 @@
-Select a Question
-Given an empty board, and player 1 is currently up
-
 When player 1 selects a card
 
 Then the score on the card is replaced by a question
