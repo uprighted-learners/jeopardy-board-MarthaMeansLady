@@ -1,10 +1,3 @@
-When player 1 selects a card
-
-Then the score on the card is replaced by a question
-
-And the "Submit Answer" button is enabled
-
-And the "Pass Question" button is enabled
 
 Pass a Question
 Given a question has been chosen
@@ -14,6 +7,7 @@ When the user clicks on the "Pass Question" button
 Then player 2 gets an opportunity to answer the question
 
 And the notification area changes to player 2's turn
+
 
 Answer a Question Correctly
 Given a question has been chosen
@@ -114,34 +108,3 @@ When the last answer is submitted
 Then the amount wagered is added or subtracted from the total score
 
 And the game should notify the users who won based on the final score
-
-Icebox
-Say my Name!
-Given the the user is on the landing page
-
-When the user clicks "Start Game"
-
-Then the game should allow the user(s) to set their player names
-
-And should use those names throughout the game
-
-Random Questions
-Given a game has been started
-
-When the board is generated
-
-Then the board has questions different from the placeholder data
-
-Daily Double
-Given a game is started
-
-When the board is generated
-
-Then two random questions should be set as the "Daily Double" and are worth twice the amount of points on their cards
-
-Try to Make Fetch Happen
-Given a game is started
-
-When the board is generated
-
-Then the board has questions fetched from an external API
