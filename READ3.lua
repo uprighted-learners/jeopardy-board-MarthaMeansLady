@@ -1,8 +1,4 @@
 
-Pass a Question
-Given a question has been chosen
-
-When the user clicks on the "Pass Question" button
 
 Then player 2 gets an opportunity to answer the question
 

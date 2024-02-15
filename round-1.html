@@ -14,7 +14,7 @@
       <div class="background-inside">
           <h3>ROUND ONE</h3>
           <div class="playerturn">
-            <h4>Player One's Turn</h4>
+            <h4 id="currentPlayerText"></h4>
           </div> 
           <!-- notification to display player one's turn to start the game -->
           <div id="modalOne" class="popupBoxOne" style="display:none;">
@@ -29,6 +29,13 @@
               <span class="closeButtonTwo">&times;</span>
               <br><br><br><p id="modalQuestion"></p><br><br><br>
               <p id="modalAnswer"></p>
+            </div>
+          </div>
+          <!-- modal for player turn -->
+          <div id="modalThree" class="popupBoxThree" style="display:none;">
+            <div class="popupContentThree">
+              <span class="closeButtonThree">&times;</span>
+              <p id="modalTurnText"></p>
             </div>
           </div>
           <!-- wrapper for the gameboard both categories and question -->
@@ -116,6 +123,4 @@
         4. https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,Otherwise%2C%20it%20will%20not%20render.
       
  -->
-
-
 

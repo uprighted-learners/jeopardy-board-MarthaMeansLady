@@ -24,20 +24,31 @@ function modalStart () {
     })
 };
 
-//closes the modal that pops up when the page is loaded
-function closePopupOne() {
-    document.getElementById("modalOne").style.display = "none";
-};
-
+//modal for question and answer pair
 function showModalQ(question, answer) {
     document.getElementById("modalQuestion").textContent = question;
     document.getElementById("modalAnswer").textContent = answer; 
     document.getElementById("modalTwo").style.display = "flex";
 }
 
+function showModalP() {
+    document.getElementById("modalTurnText").textContent = `Player ${gameCondition.currentPlayer}'s turn`;
+    document.getElementById("modalThree").style.display = "flex";
+}
+
+//closes the modal that pops up when the page is loaded
+function closePopupOne() {
+    document.getElementById("modalOne").style.display = "none";
+};
+
 //closes the modal that pops up for all questions
 function closePopupTwo() {
     document.getElementById("modalTwo").style.display = "none";
+    gameCondition.questionActive = false;
+};
+
+function closePopupThree() {
+    document.getElementById("modalThree").style.display = "none";
     gameCondition.questionActive = false;
 };
 
@@ -47,17 +58,28 @@ function updateScoreDisplay() {
     document.getElementById("playerTwoScore").textContent = gameCondition.playerScores[1];
 }
 
+//tells which player's turn it is
+function updatePlayerTurnDisplay() {
+    const playerTurnText = `Player ${gameCondition.currentPlayer}'s Turn`;
+    document.getElementById("currentPlayerDisplay").textContent = playerTurnText;
+}
+
+
 // close the modal popup
 document.querySelector(".closeButtonTwo").addEventListener('click', function(event) {
     event.stopPropagation();
     closePopupTwo()
 });
 
+document.querySelector(".closeButtonThree").addEventListener('click', function(event) {
+    event.stopPropagation();
+    closePopupThree()
+});
+
 document.getElementById("buttonPass").addEventListener('click', function(event) {
     event.preventDefault();
     closePopupTwo();
 });
-
 
 
 //pulls the categories from the placeholder file
@@ -69,6 +91,8 @@ document.querySelectorAll("#jeopardyCategory .cgory").forEach(categoryElement =>
         this.textContent = randomCategory;
     });
 });
+
+
 
 // Picks a random question and answer pair
 document.querySelectorAll("#jeopardyCategory .q").forEach(questionElement => {
@@ -110,12 +134,20 @@ document.getElementById("buttonSubmit").addEventListener('click', function(event
     
 });
 
-
-//after the first round is complete
-document.addEventListener("click", function(event) {
-    if (event.target.id === "buttonNext") {
-        event.preventDefault(); 
-        // gameCondition.currentPlayer = gameCondition.currentPlayer === 1? 2 : 1;
-        showModalPlayerTurn();
-    }
+document.getElementById("buttonPass").addEventListener("click", function (event) {
+    event.preventDefault();
+    gameCondition.currentPlayer = gameCondition.currentPlayer === 1? 2 : 1;
+    showModalP();
+    updatePlayerTurnDisplay();
+    closePopupTwo();
 });
+
+
+// after the first round is complete
+// document.addEventListener("click", function(event) {
+//     if (event.target.id === "buttonNext") {
+//         event.preventDefault(); 
+//         // gameCondition.currentPlayer = gameCondition.currentPlayer === 1? 2 : 1;
+//         showModalPlayerTurn();
+//     }
+// });
