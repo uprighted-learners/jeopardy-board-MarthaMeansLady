@@ -8,13 +8,16 @@ let gameCondition = {
     currentQuestionValue: 0,
     questionUpForSteal: false,
     currentAnswer: '',
-    targetScore: 15000,
+    targetScore: 20000,
     button0: false
 };
 
 var modalOne1 = document.getElementById('modalOne');
 var modalTwo2 = document.getElementById('modalTwo');
 var modalThree3 = document.getElementById('modalThree');
+// var questionElement = document.getElementById("");
+// var dataValue = questionElement.dataset.value; 
+// console.log(dataValue);
 
 function closeModalOne1() {
     modalOne1.style.display = "none";
@@ -31,6 +34,7 @@ function closeModalThree3() {
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("buttonNext").disabled = true;
     modalStart();
+    updateScoreDisplay();
 });
 
 //game starting modal
@@ -98,20 +102,21 @@ function updatePlayerTurnDisplay() {
     document.getElementById("currentPlayerText").textContent = currentPlayerText;
 }
 
+//check if player has reached target score after correct answer
 function checkWinningScore(playerIndex) {
-    if (gameCondition.playerScores[playerIndex] >= gameCondition.targetScore) {
+    if () {
+        
+    } (gameCondition.playerScores[playerIndex] >= gameCondition.targetScore) {
         roundOneComplete(playerIndex + 1);
     } 
 }
 
+//events that take place to close out round one
 function roundOneComplete(winningPlayer) {
     document.getElementById("modalRoundOne").style.display = "flex";
     document.getElementById("modalRoundOneText").textContent = `Round One complete. The winner is Player ${winningPlayer}. Congratulations! Please move on to the second round.`;
     document.getElementById("buttonNext").disabled = false;
-}
-
-function startRoundTwo() {
-    document.getElementById("buttonNext").disabled = true;
+    navigateToRoundTwo();
 }
 
 //allows user to click off modal to clost it
@@ -167,6 +172,9 @@ document.querySelectorAll("#jeopardyCategory .q").forEach(questionElement => {
         if (gameCondition.questionActive) {
             event.preventDefault();
             showModalWarning();   
+        } else if (gameCondition.questionUpForSteal) {
+                event.preventDefault();
+                showModalWarning();
         } else { 
             const randomIndex = Math.floor(Math.random() * placeholderQuestions.length);
             const randomQuestion = placeholderQuestions[randomIndex].question;
@@ -178,10 +186,7 @@ document.querySelectorAll("#jeopardyCategory .q").forEach(questionElement => {
             this.classList.add('used');
             gameCondition.questionActive = true;
             updatePlayerTurnDisplay();
-        }   
-                  
-    });
-});
+        }});});
 
 //updating player scores based on correct or incorrect answer, or if a player steals
 document.getElementById("buttonSubmit").addEventListener('click', function(event) {
@@ -196,12 +201,13 @@ document.getElementById("buttonSubmit").addEventListener('click', function(event
         updatePlayerTurnDisplay();
         } else {
         if (!gameCondition.questionUpForSteal) {
+            gameCondition.playerScores[gameCondition.currentPlayer - 1] -= gameCondition.currentQuestionValue;
             gameCondition.currentPlayer = gameCondition.currentPlayer === 1? 2 : 1;    
             checkWinningScore(gameCondition.currentPlayer - 1);
             showModalP();
             updatePlayerTurnDisplay();
-            gameCondition.playerScores[gameCondition.currentPlayer - 1] -= gameCondition.currentQuestionValue;
             gameCondition.questionUpForSteal = true;
+
         } else {
             showModalP();
             updatePlayerTurnDisplay();
@@ -217,6 +223,7 @@ document.getElementById("buttonSubmit").addEventListener('click', function(event
         
 });
 
+
 document.getElementById("buttonPass").addEventListener("click", function (event) {
     event.preventDefault();
     gameCondition.currentPlayer = gameCondition.currentPlayer === 1? 2 : 1;
@@ -225,13 +232,24 @@ document.getElementById("buttonPass").addEventListener("click", function (event)
     closePopupTwo();
 });
 
-
 // logic to start second round 
-document.addEventListener("click", function(event) {
-    if (event.target.id === "buttonNext") {
-        event.preventDefault(); 
-        gameCondition.currentPlayer = gameCondition.currentPlayer === 1? 2 : 1;
-        startRoundTwo();
-        showModalPlayerTurn();
-    }
+function navigateToRoundTwo() {
+    gameCondition.targetScore = 30000;
+    const playerOneScore = gameCondition.playerScores[0];
+    const playerTwoScore = gameCondition.playerScores[1];
+    const nextRoundUrl = `round-2.html?playerOneScore=${playerOneScore}&playerTwoScore=${playerTwoScore}`;
+    window.location.href = nextRoundUrl;
+}
+document.addEventListener("DOMContentLoaded", () => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const playerOneScoreStr = queryParams.get('playerOneScore');
+    const playerTwoScoreStr = queryParams.get('playerTwoScore');
+    //makes the previous scores into a string
+    const playerOneScore = playerOneScoreStr ? parseInt(playerOneScoreStr, 10) : 0;
+    const playerTwoScore = playerTwoScoreStr ? parseInt(playerTwoScoreStr, 10) : 0;
+    console.log(`Player One Score: ${playerOneScore}, Player Two Score: ${playerTwoScore}`);
+    gameCondition.playerScores[0] = playerOneScore;
+    gameCondition.playerScores[1] = playerTwoScore;
+    updateScoreDisplay(); 
+    updatePlayerTurnDisplay();
 });

@@ -1,22 +1,3 @@
-And the "Round 2" button becomes enabled
-
-And the "Round 2" button navigates to the Round 2 page.
-
-Hint: You can use query parameters in the URL to pass score information between pages
-
-Round 2
-Given the players are on the Round 2 Page
-
-Then the players scores are the same as they were at the end of Round 1.
-
-And the game logic behaves as Round 1.
-
-And the "Final Round" button is disabled
-
-End Round 2
-Given that the score of one user reaches 30,000 points.
-
-Or the board has been cleared
 
 Then the game alerts the players to move on to the Final Round.
 

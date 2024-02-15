@@ -70,15 +70,15 @@ body#pagelanding {
 .butt1 {
     display: flex;
     justify-content: space-around;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     color: #af0a0a;
 }
 
 .butt2 {
     text-align: end;
     margin-right: 1.9rem;
-    padding-top: 1rem;
+    padding-top: .5rem;
     
 }
 
@@ -287,11 +287,10 @@ img#pagelanding {
 #answerForm {
     text-align: center;
     color: blanchedalmond;
-    font-size: 22pt;
-    padding-top: 1rem;
+    font-size: 20pt;
+    padding-top: .5rem;
     padding-bottom: .5rem;
 }
-
 
 
 #marilyn {
@@ -312,10 +311,10 @@ img#pagelanding {
 
 .playerscore {
     display: flex;
-    font-size: 20pt;
+    font-size: 15pt;
     justify-content: space-between;
     margin: auto;
-    padding-inline: 3rem;
+    padding-inline: 1rem;
 }    
 
 .playerturn1 {
