@@ -8,7 +8,7 @@ let gameCondition = {
     currentQuestionValue: 0,
     questionUpForSteal: false,
     currentAnswer: '',
-    targetScore: 20000,
+    targetScore: 10000,
     button0: false
 };
 
@@ -33,7 +33,8 @@ function closeModalThree3() {
 //displays the first modal when the page is loaded
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("buttonNext").disabled = true;
-    modalStart();
+    // modalStart();
+    showModalP();
     updateScoreDisplay();
 });
 
@@ -104,19 +105,34 @@ function updatePlayerTurnDisplay() {
 
 //check if player has reached target score after correct answer
 function checkWinningScore(playerIndex) {
-    if () {
-        
-    } (gameCondition.playerScores[playerIndex] >= gameCondition.targetScore) {
+    if (gameCondition.playerScores[playerIndex] >= 30000) {
+        roundFinalComplete(playerIndex + 1);
+    } else if (gameCondition.playerScores[playerIndex] >= 20000) {
+        roundTwoComplete(playerIndex + 1);
+    } else if (gameCondition.playerScores[playerIndex] >= 10000) {
         roundOneComplete(playerIndex + 1);
-    } 
+    }
 }
+
 
 //events that take place to close out round one
 function roundOneComplete(winningPlayer) {
     document.getElementById("modalRoundOne").style.display = "flex";
-    document.getElementById("modalRoundOneText").textContent = `Round One complete. The winner is Player ${winningPlayer}. Congratulations! Please move on to the second round.`;
+    document.getElementById("modalRoundOneText").textContent = `Round One complete. The winner is Player ${winningPlayer}. Congratulations! fdsaPlease move on to the second round.`;
     document.getElementById("buttonNext").disabled = false;
     navigateToRoundTwo();
+}
+
+function roundTwoComplete(winningPlayer2) {
+    document.getElementById("modalRoundOne").style.display = "flex";
+    document.getElementById("modalRoundOneText").textContent = `Round One complete. The winner is Player ${winningPlayer2}. Congratulations! Please move on to the second round.`;
+    document.getElementById("buttonNext").disabled = false;
+    navigateToFinalRound();
+}
+
+function roundFinalComplete(winningPlayer3) {
+    document.getElementById("modalRoundOne").style.display = "flex";
+    document.getElementById("modalRoundOneText").textContent = `Final Round complete. The winner is Player ${winningPlayer3}. Congratulations!`;
 }
 
 //allows user to click off modal to clost it
@@ -234,12 +250,21 @@ document.getElementById("buttonPass").addEventListener("click", function (event)
 
 // logic to start second round 
 function navigateToRoundTwo() {
-    gameCondition.targetScore = 30000;
     const playerOneScore = gameCondition.playerScores[0];
+    gameCondition.targetScore = 20000;
     const playerTwoScore = gameCondition.playerScores[1];
     const nextRoundUrl = `round-2.html?playerOneScore=${playerOneScore}&playerTwoScore=${playerTwoScore}`;
     window.location.href = nextRoundUrl;
 }
+
+function navigateToFinalRound() {
+    const playerOneScore = gameCondition.playerScores[0];
+    gameCondition.targetScore = 30000;
+    const playerTwoScore = gameCondition.playerScores[1];
+    const nextRoundUrl = `final-jeopardy.html?playerOneScore=${playerOneScore}&playerTwoScore=${playerTwoScore}`;
+    window.location.href = nextRoundUrl;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const queryParams = new URLSearchParams(window.location.search);
     const playerOneScoreStr = queryParams.get('playerOneScore');

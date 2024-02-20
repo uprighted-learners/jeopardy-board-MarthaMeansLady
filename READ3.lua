@@ -1,12 +1,6 @@
 
-Then the game alerts the players to move on to the Final Round.
 
-And the "Final Round" button becomes enabled
 
-And the "Final Round" button navigates to the Final Round page.
-
-Final Round
-Given the players are on the Final Round page
 
 Then they should be presented with a category
 
