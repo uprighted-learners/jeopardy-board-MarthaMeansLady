@@ -9,6 +9,7 @@
     <title>Jeopardy</title>
   </head>
   <body id="page2">
+
     <!--labeled the body page to apply particular background style to only one body tag. -->
     <div class="background">
       <div class="background-inside">
@@ -16,6 +17,7 @@
           <div class="playerturn">
             <h4 id="currentPlayerText"></h4>
           </div> 
+
           <!-- notification to display player one's turn to start the game -->
           <div id="modalOne" class="popupBoxOne" style="display:none;">
             <div class="popupContentOne">
@@ -23,6 +25,7 @@
               <p>Player One, please choose your first category and question to begin the game!</p>
             </div>
           </div>
+
           <!-- modal that will be used for all other notifications -->
           <div id="modalTwo" class="popupBoxTwo" style="display:none;">
             <div class="popupContentTwo">
@@ -31,6 +34,7 @@
               <p id="modalAnswer"></p>
             </div>
           </div>
+
           <!-- modal for player turn -->
           <div id="modalThree" class="popupBoxThree" style="display:none;">
             <div class="popupContentThree">
@@ -50,6 +54,7 @@
               <p id="modalRoundOneText"></p>
             </div>
           </div>
+
           <!-- wrapper for the gameboard both categories and question -->
           <div class="wrappert" id="jeopardyCategory">
             <div class="cgory">Category 1</div>          
@@ -57,7 +62,9 @@
             <div class="cgory">Category 3</div>          
             <div class="cgory">Category 4</div>          
             <div class="cgory">Category 5</div>          
-            <div class="cgory">Category 6</div>     
+            <div class="cgory">Category 6</div>  
+               
+            <!-- the divs for the different categories that will be targeted by javascript. -->
             <div id="question1-100" data-value="10000" class="q">100</div>  
             <div id="question2-100" data-value="10000" class="q">100</div>  
             <div id="question3-100" data-value="10000" class="q">100</div>  
@@ -89,12 +96,14 @@
             <div id="question5-500" data-value="10000" class="q">500</div>  
             <div id="question6-500" data-value="10000" class="q">500</div>  
         </div>
+
           <!-- the submit button right under gameboard -->
           <form id="answerForm">
             <label for="submitAnswer" class="input-label"></label>
             <input type="text" id="submitAnswer" name="submitAnswer" class="input-field" required title="This is a title" placeholder="       Input your answer">            
               <button class="button0" id="buttonSubmit">&nbspSUBMIT</button>
           </form>
+
           <!-- guess, pass, and next buttons -->
           <div class="butt1">
               <button class="button0" id="buttonPass">&nbspPASS</button>
@@ -102,6 +111,7 @@
               <button class="button0" id="buttonNext" disabled>&nbspFINAL</button>
             </a>
           </div>
+
       <!-- scorecard for both players -->
       <div class="playerscore">
         <div class="player1">
@@ -125,14 +135,4 @@
   @MarthaMeansLady
 </footer>
 </html>
-<!-- credits:
-        1. https://css-tricks.com/apply-a-filter-to-a-background-image/
-      
-        2. https://dev.to/khush2706/changing-background-image-opacity-using-before-and-after-pseudo-elements-32i7
-      
-        3. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr
-      
-        4. https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,Otherwise%2C%20it%20will%20not%20render.
-      
- -->
 
