@@ -1,15 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" type="module"></script>
     <title>Jeopardy</title>
-    <script src="./scripts/index.js" type="module"></script>
   </head>
-  <body>
-    <h1>Second Round</h1>
-    <!-- Do not change the script source. Allows import/export to work. -->
-    <script src="./scripts/index.js" type="module"></script>
+  <body id="page2">
+
+    <!--labeled the body page to apply particular background style to only one body tag. -->
+    <div class="background">
+      <div class="background-inside">
+          <h3>ROUND TWO</h3>
+          <div class="playerturn">
+            <h4 id="currentPlayerText"></h4>
+          </div> 
+
+          <!-- notification to display player one's turn to start the game -->
+          <div id="modalOne" class="popupBoxOne" style="display:none;">
+            <div class="popupContentOne">
+              <span class="closeButtonOne">&times;</span>
+              <p>Player One, please choose your first category and question to begin the game!</p>
+            </div>
+          </div>
+
+          <!-- modal that will be used for all other notifications -->
+          <div id="modalTwo" class="popupBoxTwo" style="display:none;">
+            <div class="popupContentTwo">
+              <span class="closeButtonTwo">&times;</span>
+              <br><br><br><p id="modalQuestion"></p><br><br><br>
+              <p id="modalAnswer"></p>
+            </div>
+          </div>
+
+          <!-- modal for player turn -->
+          <div id="modalThree" class="popupBoxThree" style="display:none;">
+            <div class="popupContentThree">
+              <span class="closeButtonThree">&times;</span>
+              <p id="modalTurnText"></p>
+            </div>
+          </div>
+          <div id="modalWarning" class="popupBoxFour" style="display:none;">
+            <div class="popupContentFour">
+              <span class="closeButtonFour">&times;</span>
+              <p id="modalWarningText"></p>
+            </div>
+          </div>
+          <div id="modalRoundOne" class="popupBoxFive" style="display:none;">
+            <div class="popupContentFive">
+              <span class="closeButtonFive">&times;</span>
+              <p id="modalRoundOneText"></p>
+            </div>
+          </div>
+
+          <!-- wrapper for the gameboard both categories and question -->
+          <div class="wrappert" id="jeopardyCategory">
+            <div class="cgory">Category 1</div>          
+            <div class="cgory">Category 2</div>          
+            <div class="cgory">Category 3</div>          
+            <div class="cgory">Category 4</div>          
+            <div class="cgory">Category 5</div>          
+            <div class="cgory">Category 6</div>  
+               
+            <!-- the divs for the different categories that will be targeted by javascript. -->
+            <div id="question1-100" data-value="10000" class="q">100</div>  
+            <div id="question2-100" data-value="10000" class="q">100</div>  
+            <div id="question3-100" data-value="10000" class="q">100</div>  
+            <div id="question4-100" data-value="10000" class="q">100</div>  
+            <div id="question5-100" data-value="10000" class="q">100</div>  
+            <div id="question6-100" data-value="10000" class="q">100</div>  
+            <div id="question1-200" data-value="10000" class="q">200</div>  
+            <div id="question2-200" data-value="10000" class="q">200</div>   
+            <div id="question3-200" data-value="10000" class="q">200</div>   
+            <div id="question4-200" data-value="10000" class="q">200</div>  
+            <div id="question5-200" data-value="10000" class="q">200</div>  
+            <div id="question6-200" data-value="10000" class="q">200</div>  
+            <div id="question1-300" data-value="10000" class="q">300</div>  
+            <div id="question2-300" data-value="10000" class="q">300</div>  
+            <div id="question3-300" data-value="10000" class="q">300</div>  
+            <div id="question4-300" data-value="10000" class="q">300</div>  
+            <div id="question5-300" data-value="10000" class="q">300</div>  
+            <div id="question6-300" data-value="10000" class="q">300</div>  
+            <div id="question1-400" data-value="10000" class="q">400</div>  
+            <div id="question2-400" data-value="10000" class="q">400</div>  
+            <div id="question3-400" data-value="10000" class="q">400</div>  
+            <div id="question4-400" data-value="10000" class="q">400</div>  
+            <div id="question5-400" data-value="10000" class="q">400</div>  
+            <div id="question6-400" data-value="10000" class="q">400</div>  
+            <div id="question1-500" data-value="10000" class="q">500</div>  
+            <div id="question2-500" data-value="10000" class="q">500</div>  
+            <div id="question3-500" data-value="10000" class="q">500</div>  
+            <div id="question4-500" data-value="10000" class="q">500</div>  
+            <div id="question5-500" data-value="10000" class="q">500</div>  
+            <div id="question6-500" data-value="10000" class="q">500</div>  
+        </div>
+
+          <!-- the submit button right under gameboard -->
+          <form id="answerForm">
+            <label for="submitAnswer" class="input-label"></label>
+            <input type="text" id="submitAnswer" name="submitAnswer" class="input-field" required title="This is a title" placeholder="       Input your answer">            
+              <button class="button0" id="buttonSubmit">&nbspSUBMIT</button>
+          </form>
+
+          <!-- guess, pass, and next buttons -->
+          <div class="butt1">
+              <button class="button0" id="buttonPass">&nbspPASS</button>
+            <a href="final-jeopardy.html">
+              <button class="button0" id="buttonNext" disabled>&nbspFINAL</button>
+            </a>
+          </div>
+
+      <!-- scorecard for both players -->
+      <div class="playerscore">
+        <div class="player1">
+          <h7>Player 1 Score:
+            <div id="playerOneScore" class="input">
+            <input id="playerOneScore" title="User Input">
+            </div>
+          </h7>
+        </div>
+        <div class="player2">
+          <h7>Player 2 Score:
+            <div id="playerTwoScore" class="input">
+            <input id="playerTwoScore" title="User Input">
+           </div>
+          </h7>
+        </div>
+      </div>
+      <div class="butt2"></div>
   </body>
+<footer class="foot1">
+  @MarthaMeansLady
+</footer>
 </html>
+
